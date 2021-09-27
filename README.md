@@ -1,6 +1,4 @@
-# Solidity Template
-
-My favourite setup for writing Solidity smart contracts.
+# Credefi Contracts
 
 - [Hardhat](https://github.com/nomiclabs/hardhat): compile and run the smart contracts on a local development network
 - [TypeChain](https://github.com/ethereum-ts/TypeChain): generate TypeScript types for smart contracts
@@ -10,8 +8,11 @@ My favourite setup for writing Solidity smart contracts.
 - [Solcover](https://github.com/sc-forks/solidity-coverage): code coverage
 - [Prettier Plugin Solidity](https://github.com/prettier-solidity/prettier-plugin-solidity): code formatter
 
-This is a GitHub template, which means you can reuse it as many times as you want. You can do that by clicking the "Use this
-template" button at the top of the page.
+The token contract is controller by Timelock Controller. When set as the 
+owner of an `Ownable` smart contract, it enforces a timelock on all `onlyOwner` maintenance operations. This gives time for users of the controlled contract to exit before a potentially dangerous maintenance operation is applied.
+
+By default, the Timelock Controller is self administered, meaning administration tasks
+have to go through the timelock process. The proposer (resp executor) role is in charge of proposing(resp executing) operations. The CredefiTimelock is governed by a Gnosis Safe multisig wallet.
 
 ## Usage
 
