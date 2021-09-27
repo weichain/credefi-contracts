@@ -12,7 +12,7 @@ The token contract is controller by Timelock Controller. When set as the
 owner of an `Ownable` smart contract, it enforces a timelock on all `onlyOwner` maintenance operations. This gives time for users of the controlled contract to exit before a potentially dangerous maintenance operation is applied.
 
 By default, the Timelock Controller is self administered, meaning administration tasks
-have to go through the timelock process. The proposer (resp executor) role is in charge of proposing(resp executing) operations. The CredefiTimelock is governed by a [Gnosis Safe multisig wallet](https://gnosis-safe.io/).
+have to go through the timelock process. The proposer (resp executor) role is in charge of proposing(resp executing) operations. The `CredefiTimelock` is governed by a [Gnosis Safe multisig wallet](https://gnosis-safe.io/).
 
 ## Usage
 
